@@ -3,7 +3,13 @@ package org.example
 import org.example.Connection.EntidadeJDBC
 
 // Gabriel Enzo Libero Maran, Gustavo Grosbelli, João Pedro Uhry, Paulo Augusto Vieira
-// conexão (ajuste URL/porta/credenciais conforme necessário)
+
+// Esta função conecta no banco e faz uma busca por nome (com LIKE %texto%).
+// Ela ignora maiúsculas/minúsculas e retorna todas as pessoas encontradas.
+// Usa PreparedStatement para evitar SQL Injection e monta objetos Pessoa.
+// Depois fecha resultado e conexão para não dar vazamento de recursos.
+// Por fim devolve uma lista com as pessoas que batem com a pesquisa.
+
 val conectar = EntidadeJDBC(
     url = "jdbc:postgresql://localhost:5433/exemploHuilson",
     usuario = "postgres",
@@ -18,6 +24,7 @@ data class Pessoa(
     val telefone: String,
     val email: String
 )
+
 
 /**
  * Busca pessoas cujo nome contenha a string fornecida (case-insensitive).
