@@ -83,6 +83,13 @@
             <artifactId>kotlin-stdlib</artifactId>
             <version>2.1.0</version>
         </dependency>
+        <!--Dependencia do Banco-->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.5</version>
+            <!--NÃO USE A VERSÃO .7, por algum motivo misterioso, da erro-->
+        </dependency>
     </dependencies>
 
 </project>
