@@ -36,6 +36,7 @@ fun criarTabelaCliente() {
     banco.close()
 }
 
+//Função resposavel por se conectar no banco e dar um SELECT * em cliente
 fun selectCliente() {
     val sql = """
         SELECT c.id, p.cpf, p.nome, p.idade, p.telefone, p.email

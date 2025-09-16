@@ -7,6 +7,7 @@ import org.example.Repository.selectCliente
 
 //Alunos:
 // Gabriel Enzo Libero Maran, Gustavo Grosbelli, João Pedro Uhry, Paulo Augusto Vieira
+//Como foi feito: Criamos um fk em cliente para se relacionar com pessoa. No codigo foi usada a herança direta do kotlin para as classes
 fun main() {
     try {
         // Criação das tabelas
