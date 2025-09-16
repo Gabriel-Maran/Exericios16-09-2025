@@ -9,6 +9,7 @@ val conectar = EntidadeJDBC(
     usuario = "postgres",
     senha = "root"
 )
+// Gabriel Enzo Libero Maran, Gustavo Grosbelli, João Pedro Uhry, Paulo Augusto Vieira
 
 // ----- Model simples -----
 data class Produto(val id: Int? = null, val nome: String, val preco: BigDecimal)
