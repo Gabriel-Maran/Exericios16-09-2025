@@ -10,6 +10,10 @@ val conectar = EntidadeJDBC(
     senha = "root"
 )
 // Gabriel Enzo Libero Maran, Gustavo Grosbelli, João Pedro Uhry, Paulo Augusto Vieira
+//Nessa atividade, a ideia é lidar com o tipo BigDecimal, que não existe diretamente no SQL. Como solução, o preço do produto foi salvo no banco como VARCHAR (um texto).
+//Quando inserimos um produto, o valor do BigDecimal é convertido em string para armazenar.
+//Quando buscamos do banco, esse texto é lido e convertido de volta para BigDecimal dentro do objeto Produto no código Kotlin.
+//Assim, no banco fica texto, mas no programa continuamos trabalhando com números decimais de forma correta.
 
 // ----- Model simples -----
 data class Produto(val id: Int? = null, val nome: String, val preco: BigDecimal)
